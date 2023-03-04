@@ -2,14 +2,30 @@ const startHour = parseInt(prompt('Digite a hora de início'));
 const startMin = parseInt(prompt('Digite os minutos de início'));
 const endHour = parseInt(prompt('Digite a hora de termino'));
 const endMin = parseInt(prompt('Digite a minutos de termino'));
+const info = document.querySelector("#info");
 
-function calcularDuracao(startHour, startMin, endHour, endMin) {
-  const HOURS_IN_MINUTES = 60;
-  const MAX_HOURS = 24;
+function calcularDuracao(firstHour, firstMin, endHour, endMin) {
+
+  let hourDuration;
+  let minDuration;
   
-  startMin = startHour * HOURS_IN_MINUTES * startMin
-  console.log(startMin)
-  return console.log(`Você começou: ${startHour}:${startMin}
-  e terminou:${endHour}:${endMin}. Então você demorou`)
+  
+
+  if(endHour >= firstHour) {
+    hourDuration = endHour - firstHour
+  } else {
+    firstHour = firstHour - 24
+    hourDuration = endHour - firstHour - 1
+  }
+
+  if(endMin >= firstMin) {
+    minDuration = endMin - firstMin;
+  } else {
+    minDuration = firstMin - endMin
+  }
+
+  return info.innerHTML = `Começou: ${String(startHour).padStart(2, '0')}:${String(firstMin).padStart(2, '0')}
+  <br>Acabou:${String(endHour).padStart(2, '0')}:${String(endMin).padStart(2, '0')}<br>
+  Duração:${String(hourDuration).padStart(2, '0')}:${String(minDuration).padStart(2, '0')}`
 }
-console.log(calcularDuracao(startHour, startMin, endHour, endMin));
+calcularDuracao(startHour, startMin, endHour, endMin);
