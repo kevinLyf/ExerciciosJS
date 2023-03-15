@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-size: 14pt;
+  outline: none;
+  border: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #262626;
+}
+
+.calculator {
+  width: 324.4px;
+  max-width: 100%;
+  background-color: #323232;
+  border-radius: 5px;
+  padding: 1rem 1.2rem;
+  animation: appear .9s forwards;
+}
+
+.display {
+  max-width: 100%;
+  height: 7rem;
+  background-color: #86c2e0;
+  border: 0.3rem solid #8cb5c7;
+  border-radius: 5px;
+}
+.display span {
+  width: 324.4px;
+  font-size: 24pt;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.clearBtn {
+  background-color: #fd0200;
+}
+
+tbody {
+  width: 100%;
+  margin: 1rem 0;
+  display: grid;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+tbody tr {
+  width: 100%;
+  gap: 1rem;
+  display: flex;
+}
+
+button {
+  width: 55px;
+  max-width: 100%;
+  height: 55px;
+  border-radius: 2px;
+  background-color: #818181;
+  color: #fff;
+  font-size: 19pt;
+  cursor: pointer;
+  animation: tik .9s ease-out; 
+}
+
+button:not(.clearBtn):hover {
+  background-color: rgb(177, 177, 177);
+}
+
+table {
+  width: 100%;
+}
+
+.equals {
+  width: 129.5px;
+}
+
+
+@keyframes appear {
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tik {
+  0% {
+    transform: rotate(153deg);
+  }
+}
+
