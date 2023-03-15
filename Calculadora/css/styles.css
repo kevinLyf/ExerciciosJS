@@ -27,7 +27,6 @@ body {
   background-color: #323232;
   border-radius: 5px;
   padding: 1rem 1.2rem;
-  animation: appear .9s forwards;
 }
 
 .display {
@@ -72,7 +71,7 @@ button {
   color: #fff;
   font-size: 19pt;
   cursor: pointer;
-  animation: tik .9s ease-out; 
+  font-weight: 700;
 }
 
 button:not(.clearBtn):hover {
@@ -86,17 +85,3 @@ table {
 .equals {
   width: 129.5px;
 }
-
-
-@keyframes appear {
-  0% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes tik {
-  0% {
-    transform: rotate(153deg);
-  }
-}
-
