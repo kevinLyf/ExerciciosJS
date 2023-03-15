@@ -30,18 +30,17 @@ body {
 }
 
 .display {
-  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 276.84px;
   height: 7rem;
   background-color: #86c2e0;
   border: 0.3rem solid #8cb5c7;
   border-radius: 5px;
 }
 .display span {
-  width: 324.4px;
   font-size: 24pt;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .clearBtn {
