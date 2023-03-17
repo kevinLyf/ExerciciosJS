@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+  --background: #111827;
+  --formBackground: #f9f9fb;
+  --input: rgba(113, 128, 185, 0.32);
+  --colorInput: #7c7c89;
+  --buttonLogin: #7180b9;
+  --line: rgba(0, 0, 0, 0.32);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  min-height: 100vh;
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.header {
+  width: 1070px;
+  max-width: 100%;
+}
+
+.header h1 {
+  display: flex;
+  text-align: start;
+  font-weight: 400;
+  font-size: 64px;
+  color: #fff;
+}
+
+.header div {
+    position: relative;
+    width: 345px;
+}
+
+.header div img {
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 480px;
+  height: 489px;
+  background-color: var(--formBackground);
+  border-radius: 4px;
+}
+.form-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-email::after {
+  content: " ";
+  width: 124px;
+  border-bottom: 2px solid var(--buttonLogin);
+}
+
+.form-email h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.form-email input {
+  width: 400px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: var(--input);
+  color: var(--colorInput);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  border: 2px solid transparent;
+}
+
+.form-email:invalid input {
+  animation: shake 1.6s forwards;
+}
+
+.form-email button {
+  width: 400px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: var(--buttonLogin);
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-email input[type="email"] {
+  background-image: url("../assets/image/EnvelopeSimple.svg");
+  background-repeat: no-repeat;
+  background-position: 10px;
+  padding: 0rem 2.3rem;
+}
+
+.form-email input[type="password"] {
+  background-image: url("../assets/image/Lock.svg");
+  background-repeat: no-repeat;
+  background-position: 10px;
+  padding: 0rem 2.3rem;
+}
+
+.form-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  gap: 29px;
+  cursor: pointer;
+}
+
+.form-github h4 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.form-github button {
+  width: 244px;
+  height: 48px;
+  background-color: var(--buttonLogin);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  background-image: url("../assets/image/GithubLogo.svg");
+  background-repeat: no-repeat;
+  background-position: 60px;
+  cursor: pointer;
+}
