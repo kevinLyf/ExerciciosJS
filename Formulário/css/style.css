@@ -44,14 +44,14 @@ body {
 }
 
 .header div {
-    position: relative;
-    width: 345px;
+  position: relative;
+  width: 345px;
 }
 
 .header div img {
-    position: absolute;
-    bottom: 15px;
-    right: 0;
+  position: absolute;
+  bottom: 15px;
+  right: 0;
 }
 
 .main {
@@ -71,10 +71,9 @@ body {
 }
 .form-email {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 24px;
+  align-items: center;
 }
 
 .form-email::after {
@@ -100,6 +99,11 @@ body {
   font-size: 14px;
   border: 2px solid transparent;
 }
+#warn {
+  align-self: flex-start;
+  margin: 0.3rem 0;
+  color: red;
+}
 
 .form-email:invalid input {
   animation: shake 1.6s forwards;
@@ -114,6 +118,7 @@ body {
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
+  margin: 1rem 0;
 }
 
 .form-email input[type="email"] {
