@@ -20,10 +20,10 @@ const addItem = () => {
 
 const orderItem = () => {
     const orderItem = items.sort((a, b) => {
-        if(a > b) {
+        if(String(a).toLocaleLowerCase() > String(b).toLocaleLowerCase()) {
             return 1;
         }
-        else if (a < b) {
+        else if (String(a).toLocaleLowerCase() < String(b).toLocaleLowerCase()) {
             return -1;
         } 
         else {
