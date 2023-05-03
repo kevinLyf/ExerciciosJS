@@ -9,31 +9,33 @@ import myOject from "../info.json" assert { type: "json" };
 
 let index = 0;
 
-define(index);
+showPerson(index);
 
 nextBtn.addEventListener("click", () => {
   if (index === myOject.length) {
     index = 0;
   }
 
-  define(index);
+  showPerson(index);
 
   index++;
 });
 
 backBtn.addEventListener("click", () => {
-    if(index > 0) index = myOject.length - 1;
+    if(index < 0) {
+      index = myOject.length - 1
+      showPerson(index);
+    };
     
-    define(index);
-    
+    showPerson(index);
     index--;
 });
 
 supriseBtn.addEventListener("click", () => {
-  define(Math.floor(Math.random() * myOject.length));
+  showPerson(Math.floor(Math.random() * myOject.length));
 });
 
-function define(index) {
+function showPerson(index) {
   avatar.setAttribute("src", myOject[index].avatar);
   userName.innerHTML = myOject[index].name;
   job.innerHTML = myOject[index].job;
