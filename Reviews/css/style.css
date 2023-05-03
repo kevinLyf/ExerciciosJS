@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #121212;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fafafa;
+  padding: 1rem;
+}
+
+header h2 {
+  position: relative;
+  font-size: 28pt;
+}
+
+header h2::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 5rem;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #0059ff;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  max-width: 100%;
+  min-height: 700px;
+  max-height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 4rem;
+  padding: 2rem;
+
+  -webkit-box-shadow: 0px 0px 14px 3px rgba(221, 221, 221, 0.91);
+  -moz-box-shadow: 0px 0px 14px 3px rgba(221, 221, 221, 0.91);
+  box-shadow: 0px 0px 14px 3px rgba(221, 221, 221, 0.91);
+}
+
+main section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.avatar {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  object-fit: cover;
+  box-shadow: 5px -6px 0px 8px #0059ff;
+  border-color: 2px solid #0059ff;
+}
+
+.info {
+  text-align: center;
+}
+
+.info p {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.info span {
+  font-weight: 600;
+  color: #0059ff;
+}
+
+.description {
+  width: 100%;
+  min-height: 180px;
+  margin-top: 0.6rem;
+}
+
+.description p {
+  color: #7a7a7a;
+}
+
+.btns-actions {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btns-actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.supriseBtn {
+  border: 2px solid #0059ff;
+  background-color: transparent;
+  color: #0059ff;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.supriseBtn:hover {
+  transition: all 0.2s ease;
+  background-color: #0059ff;
+  color: #fff;
+}
