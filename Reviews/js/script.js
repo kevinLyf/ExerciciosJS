@@ -9,6 +9,8 @@ import myOject from "../info.json" assert { type: "json" };
 
 let index = 0;
 
+define(index);
+
 nextBtn.addEventListener("click", () => {
   if (index === myOject.length) {
     index = 0;
@@ -20,13 +22,11 @@ nextBtn.addEventListener("click", () => {
 });
 
 backBtn.addEventListener("click", () => {
-  if (index === 0) {
-    index = myOject.length - 1;
+    if(index > 0) index = myOject.length - 1;
+    
     define(index);
-  } else {
+    
     index--;
-    define(index);
-  }
 });
 
 supriseBtn.addEventListener("click", () => {
