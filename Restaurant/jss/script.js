@@ -1,4 +1,5 @@
 const menuItems = document.getElementById("menu-items"); 
+const div = document.createElement("div");
 
 const menu = [
   {
@@ -102,7 +103,6 @@ const menu = [
   },
 ];
 
-const div = document.createElement("div");
 
 // Initial Food
 allFoods();
