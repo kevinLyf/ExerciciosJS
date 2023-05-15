@@ -1,4 +1,4 @@
-const menuItems = document.getElementById("menu-items"); 
+const menuItems = document.getElementById("menu-items");
 const div = document.createElement("div");
 
 const menu = [
@@ -103,9 +103,10 @@ const menu = [
   },
 ];
 
-
 // Initial Food
-allFoods();
+window.addEventListener("DOMContentLoaded", () => {
+  allFoods();
+});
 
 // Filter Buttons
 document.querySelectorAll("[data-id]").forEach((element) => {
@@ -136,8 +137,7 @@ function filter(element, category) {
   if (element.getAttribute("data-id") === category) {
     menu.map((value, index) => {
       if (menu[index].category === category) {
-        div.innerHTML += 
-          `<div class="menu-item">
+        div.innerHTML += `<div class="menu-item">
               <div class="item-image">
                 <img src="${menu[index].image}" alt="${menu[index].title}" />
               </div>       
