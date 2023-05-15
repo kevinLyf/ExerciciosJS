@@ -136,22 +136,22 @@ function filter(element, category) {
   if (element.getAttribute("data-id") === category) {
     menu.map((value, index) => {
       if (menu[index].category === category) {
-        div.innerHTML += `<div class="menu-item">
-                              <div class="item-image">
-                              <img src="${menu[index].image}" alt="${menu[index].title}" />
-                              </div>
-                      
-                              <div class="item-info">
-                              <div class="item-title">
-                                  <p>${menu[index].title}</p>
-                                  <p class="price">R$${menu[index].price}</p>
-                              </div>
-                              
-                              <div class="item-description">
-                              <p>${menu[index].description}</p>
-                              </div>
-                              </div>
-                              </div>`;
+        div.innerHTML += 
+          `<div class="menu-item">
+              <div class="item-image">
+                <img src="${menu[index].image}" alt="${menu[index].title}" />
+              </div>       
+              <div class="item-info">
+                <div class="item-title">
+                    <p>${menu[index].title}</p>
+                    <p class="price">R$${menu[index].price}</p>
+                </div>
+                                
+                <div class="item-description">
+                  <p>${menu[index].description}</p>
+                </div>
+              </div>
+            </div>`;
         menuItems.appendChild(div);
       }
     });
