@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Card Flip</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="" />
+            <h2>Leticia Dias</h2>
+            <p>Maceió - AL</p>
+          </div>
+
+          <div class="flip-card-back">
+            <h2>Full Stack Developer</h2>
+            <p>Follow Me</p>
+            <ul>
+              <li>
+                <a href="#">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1200px-Instagram-Icon.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/800px-GitHub_Invertocat_Logo.svg.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="https://img.freepik.com/icones-gratis/twitter_318-674515.jpg?w=2000"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                    src="https://img.freepik.com/icones-gratis/linkedin_318-157468.jpg"
+                    alt=""
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button class="like-button" id="like-button">
+        <svg
+        id="heart-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          class="bi bi-heart-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+          />
+        </svg>
+        <span id="like-count">0</span>
+      </button>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
