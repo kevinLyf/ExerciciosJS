@@ -1,0 +1,265 @@
+@import url("https://fonts.google.com/specimen/Space+Mono");
+
+:root {
+  --verydarkcyan: hsl(183, 100%, 15%);
+  --darkgrayishcyan: hsl(186, 14%, 43%);
+  --grayishgyan: hsl(184, 14%, 56%);
+  --lightcyan: hsl(185, 41%, 84%);
+  --verylightgrayishcyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+
+  background-color: var(--lightcyan);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1 {
+  letter-spacing: 0.3rem;
+
+  color: var(--verydarkcyan);
+  font-weight: 600;
+}
+
+.bill-box {
+  width: 800px;
+  height: 450px;
+  max-width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--white);
+}
+
+.bill-controller {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.bill-controller label p {
+  font-size: 15pt;
+  font-weight: 800;
+  color: var(--darkgrayishcyan);
+}
+
+.bill-controller label input {
+  width: 100%;
+
+  padding: 0.4rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 0.3rem;
+  background-color: var(--verylightgrayishcyan);
+  background-image: url("../images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: 15px;
+
+  color: var(--verydarkcyan);
+  font-size: 18pt;
+  font-weight: bold;
+  text-align: end;
+
+  margin-top: 0.6rem;
+}
+
+.bill-controller label input:focus {
+  border: 2px solid #82cac2;
+}
+
+.bill-controller-select {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.bill-controller-select p {
+  font-size: 14pt;
+  font-weight: 800;
+  color: var(--darkgrayishcyan);
+}
+
+.bill-controller-select-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+.bill-controller-select button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: var(--verydarkcyan);
+
+  font-size: 17pt;
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.bill-controller-select button:hover {
+  background-color: #26c2ad;
+  color: var(--verydarkcyan);
+}
+
+.bill-controller-select input {
+  width: 100%;
+
+  border: 1px solid transparent;
+  border-radius: 0.3rem;
+  background-color: var(--verylightgrayishcyan);
+
+  color: var(--verydarkcyan);
+  text-align: center;
+  font-size: 17pt;
+  font-weight: 600;
+}
+
+.bill-controller-select input:focus {
+  border: 2px solid #82cac2;
+}
+
+.bill-controller-people-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--darkgrayishcyan);
+  font-size: 14pt;
+  font-weight: 800;
+}
+
+.bill-controller-people input {
+  width: 100%;
+
+  padding: 0.4rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 0.3rem;
+  background-color: var(--verylightgrayishcyan);
+  background-image: url("../images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: 15px;
+
+  color: var(--verydarkcyan);
+  font-size: 18pt;
+  font-weight: bold;
+  text-align: end;
+
+  margin-top: 0.6rem;
+}
+
+.bill-controller-people input:focus {
+  border: 2px solid #82cac2;
+}
+
+.people-error {
+    display: none;
+    color: #e95858;
+}
+
+.bill-info {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--verydarkcyan);
+}
+
+.bill-info-tips {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.bill-info-tip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bill-info-tip p {
+  color: var(--white);
+  font-size: 15pt;
+}
+
+.bill-info-tip span {
+  color: var(--grayishgyan);
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+.bill-info-tip .result {
+  font-size: 25pt;
+  font-weight: bold;
+  color: #26c2ad;
+}
+
+.bill-info button {
+  width: 100%;
+
+  padding: 0.6rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #26c2ad;
+
+  color: var(--verydarkcyan);
+  font-weight: bold;
+  font-size: 19pt;
+  cursor: pointer;
+}
+
+.bill-info button:hover {
+  transition: all 0.4s ease;
+  background-color: var(--lightcyan);
+}
+
+.active {
+  background-color: #26c2ad !important;
+  color: var(--verydarkcyan) !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

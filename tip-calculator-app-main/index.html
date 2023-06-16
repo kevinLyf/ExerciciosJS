@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>SPLI<br />TTER</h1>
+    </header>
+
+    <main class="main">
+      <section class="bill-box">
+        <div class="bill-controller">
+          <label>
+            <p>Bill</p>
+            <input type="number" id="bill" placeholder="0" />
+          </label>
+
+          <div class="bill-controller-select">
+            <p>Select Tip %</p>
+            <div class="bill-controller-select-options">
+              <button data-tip="5">5%</button>
+              <button data-tip="10">10%</button>
+              <button data-tip="15">15%</button>
+              <button data-tip="25">25%</button>
+              <button data-tip="50">50%</button>
+              <input type="number" placeholder="Custom" id="custom-tip" />
+            </div>
+          </div>
+
+          <div class="bill-controller-people">
+            <div class="bill-controller-people-title">
+              <p>Number of People</p>
+              <span class="people-error" id="people-error"
+                >Can't be zero</span
+              >
+            </div>
+            <input type="number" id="people" placeholder="0" />
+          </div>
+        </div>
+
+        <div class="bill-info">
+          <div class="bill-info-tips">
+            <div class="bill-info-tip">
+              <div>
+                <p>Tip Amount</p>
+                <span>/ person</span>
+              </div>
+              <span class="result" id="tip-result">$0.00</span>
+            </div>
+
+            <div class="bill-info-tip">
+              <div>
+                <p>Total</p>
+                <span>/ person</span>
+              </div>
+              <span class="result" id="total-result">$0.00</span>
+            </div>
+          </div>
+
+          <button id="reset">RESET</button>
+        </div>
+      </section>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
